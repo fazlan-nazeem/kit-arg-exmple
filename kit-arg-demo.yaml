@@ -1,0 +1,11 @@
+# syntax=docker/sandbox-kit:3
+schemaVersion: "3"
+kind: workload
+version: "1.0.0"
+description: Demo - override the kit build base image with --kit-arg
+capabilities:
+  - type: com.docker.sandbox/sbx@1
+args:
+  base:
+    default: debian:trixie-slim
+    buildArg: BASE_IMAGE
